@@ -1,0 +1,61 @@
+:root {
+    --font-family-main: "Poppins", serif;
+
+    // xxxs
+    --font-size-xxxs: 10px;
+    --font-line-xxxs: 15px;
+    --font-xxxs: var(--font-size-xxxs) / var(--font-line-xxxs) var(--font-family-main);
+
+    // xxs
+    --font-size-xxs: 12px;
+    --font-line-xxs: 18px;
+    --font-xxs: var(--font-size-xxs) / var(--font-line-xxs) var(--font-family-main);
+
+    // xs
+    --font-size-xs: 14px;
+    --font-line-xs: 21px;
+    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+
+    // s
+    --font-size-s: 16px;
+    --font-line-s: 24px;
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+
+    // m
+    --font-size-m: 18px;
+    --font-line-m: 27px;
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+    // l
+    --font-size-l: 20px;
+    --font-line-l: 30px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+    // xl
+    --font-size-xl: 24px;
+    --font-line-xl: 28px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+    // xxl
+    --font-size-xxl: 32px;
+    --font-line-xxl: 40px;
+    --font-xxl: var(--font-size-xxl) / var(--font-line-xxl) var(--font-family-main);
+
+
+    // sizes
+    --navbar-height-l: 100px;
+    --navbar-height-m: 70px;
+    
+    --content-width-xl: 1400px;
+    --homepage-left-width-xl: 917px;
+    --homepage-right-width-xl: 483px;
+
+    // z-index
+    --navbar-z-index: 1;
+
+    // colors
+    --orange-light: #DB9E2F;
+    --orange-dark: #BE8317;
+    --gray-dark: #4E4C47;
+    --green-dark: #0F9D58
+}
