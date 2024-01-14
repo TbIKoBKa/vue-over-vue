@@ -1,7 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
-import { Homepage } from '@/pages/Homepage'
-import { TodoList } from '@/pages/TodoList'
+import { Homepage } from '@/pages/Homepage';
+import { TodoList } from '@/pages/TodoList';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -17,6 +17,6 @@ const router = createRouter({
       component: TodoList
     }
   ]
-})
+});
 
-export default router
+export default router;
