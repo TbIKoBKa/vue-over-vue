@@ -49,7 +49,7 @@ withDefaults(defineProps<ILoaderProps>(), {
   }
 
   &.primary div {
-    background: var(--inverted-bg-color);
+    background: var(--secondary-bg-color);
   }
 
   &.secondary div {

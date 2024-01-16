@@ -7,7 +7,9 @@ withDefaults(defineProps<IButtonProps>(), {
 });
 </script>
 <template>
-  <button :class="['btn', color, size, variant, className, { centered, fluid }]"><slot /></button>
+  <button :class="['btn', color, size, variant, className, { centered, fluid, icon }]">
+    <slot />
+  </button>
 </template>
 <style scoped lang="scss">
 .btn {
@@ -46,6 +48,12 @@ withDefaults(defineProps<IButtonProps>(), {
     padding: 10px 24px;
     font: var(--font-m);
 
+    &.icon {
+      justify-content: center;
+      padding: 0;
+      width: 50px;
+    }
+
     @media screen and (max-width: 1024px) {
       font: var(--font-s);
     }
@@ -54,13 +62,19 @@ withDefaults(defineProps<IButtonProps>(), {
     height: 40px;
     padding: 4px 24px;
     font: var(--font-s);
+
+    &.icon {
+      justify-content: center;
+      padding: 0;
+      width: 40px;
+    }
   }
 
   &.filled {
     &.primary {
       color: var(--secondary-color);
-      background-color: var(--button-bg);
-      border: 1px solid var(--button-bg);
+      background-color: var(--secondary-bg-color);
+      border: 1px solid var(--secondary-bg-color);
     }
     &.inverted-primary {
       color: var(--primary-color);
@@ -75,9 +89,9 @@ withDefaults(defineProps<IButtonProps>(), {
   }
   &.border {
     &.primary {
-      color: var(--button-bg);
+      color: var(--secondary-bg-color);
       background-color: transparent;
-      border: 1px solid var(--button-bg);
+      border: 1px solid var(--secondary-bg-color);
     }
     &.inverted-primary {
       color: var(--inverted-primary-color);

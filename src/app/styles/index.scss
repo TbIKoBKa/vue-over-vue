@@ -1,6 +1,7 @@
 @import "reset";
 @import "variables/global";
-@import "themes/normal";
+@import "themes/light.scss";
+@import "themes/dark.scss";
 
 #app {
     display: flex;

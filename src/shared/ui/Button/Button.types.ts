@@ -11,4 +11,5 @@ export interface IButtonProps extends /* @vue-ignore */ ButtonHTMLAttributes {
   variant?: TButtonVariant;
   fluid?: boolean;
   centered?: boolean;
+  icon?: boolean;
 }
