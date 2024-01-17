@@ -52,10 +52,10 @@ const doneTodoHandler = (todo: ITodoItem) => {
           {{ t('forms.buttons.add') }}
         </Button>
       </div>
-      <div class="todos">
-        <div v-if="!todos.length">
-          <p class="text">{{ t('pages.todolist.empty') }}</p>
-        </div>
+      <div v-if="!todos.length">
+        <p class="text">{{ t('pages.todolist.empty') }}</p>
+      </div>
+      <TransitionGroup class="todos" tag="div" name="todos">
         <Todo
           class="todo"
           v-for="todo in todos"
@@ -64,7 +64,7 @@ const doneTodoHandler = (todo: ITodoItem) => {
           @remove="removeTodoHandler"
           @done="doneTodoHandler"
         />
-      </div>
+      </TransitionGroup>
     </div>
   </Page>
 </template>
@@ -93,5 +93,16 @@ const doneTodoHandler = (todo: ITodoItem) => {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.todos-enter-active,
+.todos-leave-active {
+  transition: all 0.5s ease;
+}
+
+.todos-enter-from,
+.todos-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>
