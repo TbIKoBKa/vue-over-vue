@@ -19,5 +19,10 @@
         "todolist": {
             "empty": "List is empty"
         }
+    },
+    "modals": {
+        "connect": {
+            "title": "Connect wallet"
+        }
     }
 }

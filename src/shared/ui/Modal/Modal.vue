@@ -15,7 +15,7 @@ const onCloseHandler = () => emit('close');
       <div v-if="open" class="modal-backdrop" @mousedown.self="onCloseHandler">
         <div class="modal-root">
           <div class="modal-header">
-            <Text size="xxl">{{ title }}</Text>
+            <Text color="inverted-primary" size="xxl">{{ title }}</Text>
             <Button size="s" color="inverted-primary" icon @click="onCloseHandler">
               <Cross width="28" height="28" />
             </Button>
@@ -42,7 +42,7 @@ const onCloseHandler = () => emit('close');
 .modal-root {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
   max-width: 600px;
   max-height: 80vh;

@@ -2,9 +2,9 @@
 import { RouterLink } from 'vue-router';
 
 import Logo from '@/shared/assets/images/logo.png';
-import { Button } from '@/shared/ui/Button';
 import { Link } from '../Link';
 import { Theme } from '../Theme';
+import { Connect } from '../Connect';
 import { Locale } from '../Locale';
 import { useI18n } from 'vue-i18n';
 
@@ -25,9 +25,7 @@ const { t } = useI18n();
     <div class="header-right">
       <Locale />
       <Theme />
-      <Button class-name="header-right-connect-btn" color="inverted-primary" centered>
-        {{ t('header.connect') }}
-      </Button>
+      <Connect />
     </div>
   </div>
 </template>
@@ -52,9 +50,5 @@ const { t } = useI18n();
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-}
-
-.header-right-connect-btn {
-  width: 150px;
 }
 </style>
