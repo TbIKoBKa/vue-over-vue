@@ -1,0 +1,23 @@
+{
+    "forms": {
+        "buttons": {
+            "add": "Add",
+            "remove": "Remove"
+        },
+        "placeholders": {
+            "newTodo": "Enter new Todo"
+        }
+    },
+    "header": {
+        "connect": "Connect",
+        "links": {
+            "homepage": "Homepage",
+            "todolist": "Todo List"
+        }
+    },
+    "pages": {
+        "todolist": {
+            "empty": "List is empty"
+        }
+    }
+}

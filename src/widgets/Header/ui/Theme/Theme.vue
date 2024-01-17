@@ -2,8 +2,8 @@
 import { ref, computed, watchEffect } from 'vue';
 import { Button } from '@/shared/ui/Button';
 import { Moon, Sun } from '@/shared/ui/icons';
-import { LOCAL_STORAGE } from '@/shared/config/localStorage';
-import { DEFAULT_THEME } from '@/shared/config/theme';
+import { LOCAL_STORAGE } from '@/shared/const/localStorage';
+import { DEFAULT_THEME } from '@/shared/const/theme';
 import { ThemeType } from '@/shared/types/theme';
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE.THEME) || DEFAULT_THEME;
@@ -27,4 +27,3 @@ const icon = computed(() => {
     <component :is="icon" width="24px" height="24px" />
   </Button>
 </template>
-<style scoped lang="scss"></style>

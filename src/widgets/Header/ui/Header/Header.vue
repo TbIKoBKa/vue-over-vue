@@ -5,6 +5,10 @@ import Logo from '@/shared/assets/images/logo.png';
 import { Button } from '@/shared/ui/Button';
 import { Link } from '../Link';
 import { Theme } from '../Theme';
+import { Locale } from '../Locale';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -15,14 +19,15 @@ import { Theme } from '../Theme';
       </RouterLink>
     </div>
     <nav class="header-nav">
-      <Link to="/">Homepage</Link>
-      <Link to="/todo-list">Todo List</Link>
+      <Link to="/">{{ t('header.links.homepage') }}</Link>
+      <Link to="/todo-list">{{ t('header.links.todolist') }}</Link>
     </nav>
     <div class="header-right">
+      <Locale />
       <Theme />
-      <Button class-name="header-right-connect-btn" color="inverted-primary" centered
-        >Connect</Button
-      >
+      <Button class-name="header-right-connect-btn" color="inverted-primary" centered>
+        {{ t('header.connect') }}
+      </Button>
     </div>
   </div>
 </template>
@@ -50,6 +55,6 @@ import { Theme } from '../Theme';
 }
 
 .header-right-connect-btn {
-  max-width: 200px;
+  width: 150px;
 }
 </style>

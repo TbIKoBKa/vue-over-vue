@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 import type { ITodoItem } from '@/shared/types/todo';
 import { Page } from '@/widgets/Page';
 import { Button } from '@/shared/ui/Button';
@@ -9,6 +11,8 @@ import { Todo } from '@/components/Todo';
 const input = ref('');
 const inputRef = ref();
 const todos = ref<ITodoItem[]>([]);
+
+const { t } = useI18n();
 
 onMounted(() => {
   inputRef.value?.inputRef.focus?.();
@@ -34,16 +38,23 @@ const doneTodoHandler = (todo: ITodoItem) => {
 };
 </script>
 
-<template lang="">
+<template>
   <Page>
     <div class="todolist">
       <div class="form">
-        <Input ref="inputRef" type="text" v-model="input" placeholder="Enter new Todo" />
-        <Button :disabled="!input" @click="addClickHandler" size="s" fluid centered>Add</Button>
+        <Input
+          ref="inputRef"
+          type="text"
+          v-model="input"
+          :placeholder="t('forms.placeholders.newTodo')"
+        />
+        <Button :disabled="!input" @click="addClickHandler" size="s" fluid centered>
+          {{ t('forms.buttons.add') }}
+        </Button>
       </div>
       <div class="todos">
         <div v-if="!todos.length">
-          <p class="text">List is empty</p>
+          <p class="text">{{ t('pages.todolist.empty') }}</p>
         </div>
         <Todo
           class="todo"

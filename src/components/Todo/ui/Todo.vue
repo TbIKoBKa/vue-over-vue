@@ -2,8 +2,11 @@
 import type { ITodoProps, ITodoEmits } from '../types/todo';
 import { Text } from '@/shared/ui/Text';
 import { Button } from '@/shared/ui/Button';
+import { useI18n } from 'vue-i18n';
 const { todo } = defineProps<ITodoProps>();
 const emit = defineEmits<ITodoEmits>();
+
+const { t } = useI18n();
 
 const onRemove = () => {
   emit('remove', todo);
@@ -24,7 +27,7 @@ const onDone = () => {
     <div class="todo-body">
       <Text>{{ todo.title }}</Text>
     </div>
-    <Button @click="onRemove" size="s">Remove</Button>
+    <Button @click="onRemove" size="s">{{ t('forms.buttons.remove') }}</Button>
   </div>
 </template>
 

@@ -1,0 +1,23 @@
+{
+    "forms": {
+        "buttons": {
+            "add": "Добавить",
+            "remove": "Удалить"
+        },
+        "placeholders": {
+            "newTodo": "Введите новую задачу"
+        }
+    },
+    "header": {
+        "connect": "Подключить",
+        "links": {
+            "homepage": "Главная",
+            "todolist": "Список задач"
+        }
+    },
+    "pages": {
+        "todolist": {
+            "empty": "Список пуст"
+        }
+    }
+}
