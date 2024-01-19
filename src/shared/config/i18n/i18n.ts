@@ -1,17 +1,14 @@
 import { createI18n } from 'vue-i18n';
 import { type I18nOptions } from 'vue-i18n';
 
-import { LOCAL_STORAGE } from '../../const/localStorage';
-import { AVAILABLE_LOCALES, DEFAULT_LOCALE } from '../../const/locale';
+import { AVAILABLE_LOCALES, FALLBACK_LOCALE, DEFAULT_LOCALE } from '../../const/locale';
 import en from './locales/en.json';
 import ru from './locales/ru.json';
 
-const defaultLocale = localStorage.getItem(LOCAL_STORAGE.LOCALE) || navigator.language;
-
 const defaultOptions: I18nOptions = {
   legacy: false,
-  locale: defaultLocale,
-  fallbackLocale: DEFAULT_LOCALE,
+  locale: DEFAULT_LOCALE,
+  fallbackLocale: FALLBACK_LOCALE,
   availableLocales: AVAILABLE_LOCALES,
   allowComposition: true,
   globalInjection: true,

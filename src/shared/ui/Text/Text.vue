@@ -1,20 +1,24 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { type ITextProps } from './Text.types';
-const { className, color, size, weight, centered, underline } = withDefaults(
-  defineProps<ITextProps>(),
-  {
-    color: 'primary',
-    size: 'l',
-    element: 'p',
-    weight: 'medium',
-    centered: false,
-    className: '',
-    underline: false
-  }
-);
+const props = withDefaults(defineProps<ITextProps>(), {
+  color: 'primary',
+  size: 'l',
+  element: 'p',
+  weight: 'medium',
+  centered: false,
+  className: '',
+  underline: false
+});
 
-const classes = computed(() => ['root', color, size, weight, className, { centered, underline }]);
+const classes = computed(() => [
+  'root',
+  props.color,
+  props.size,
+  props.weight,
+  props.className,
+  { centered: props.centered, underline: props.underline }
+]);
 </script>
 <template>
   <component :is="element" :class="classes"><slot /></component>

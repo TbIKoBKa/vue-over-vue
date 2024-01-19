@@ -3,16 +3,16 @@ import type { ITodoProps, ITodoEmits } from '../types/todo';
 import { Text } from '@/shared/ui/Text';
 import { Button } from '@/shared/ui/Button';
 import { useI18n } from 'vue-i18n';
-const { todo } = defineProps<ITodoProps>();
+const props = defineProps<ITodoProps>();
 const emit = defineEmits<ITodoEmits>();
 
 const { t } = useI18n();
 
 const onRemove = () => {
-  emit('remove', todo);
+  emit('remove', props.todo);
 };
 const onDone = () => {
-  emit('done', todo);
+  emit('done', props.todo);
 };
 </script>
 

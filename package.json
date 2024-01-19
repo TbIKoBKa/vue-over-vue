@@ -18,6 +18,7 @@
     "@wagmi/connectors": "^4.1.4",
     "@wagmi/core": "^2.2.1",
     "buffer": "^6.0.3",
+    "pinia": "^2.1.7",
     "use-wagmi": "^1.2.1",
     "viem": "^2.2.0",
     "vue": "^3.3.11",
